@@ -9,12 +9,7 @@ Version: 0.61.4.
 
 Supports both Android and iOS devices.
 
-Uses react-native-Geolocation API for location tracking of devices.
-Reference:
 
-https://reactnative.dev/docs/geolocation  (Deprecated).
-
-https://github.com/react-native-community/react-native-geolocation  (maintained).
 
 ## Install dependencies
 
@@ -27,3 +22,30 @@ yarn install
 ```command
 yarn start
 ```
+
+## Managed and Bare Workflows
+
+![](images/workflow-diagram.png)
+
+## Docs
+
+- Expo -- a set of tools and services for building, deploying, and quickly iterating on native iOS, Android, and web apps from the same codebase. 
+
+https://docs.expo.io/versions/v34.0.0
+
+- React Native
+https://reactnative.dev/docs/getting-started
+
+- Step-by-step guid to configure your environment to allow Blue tooth development with Expo and React Native
+https://blog.expo.io/so-you-want-to-build-a-bluetooth-app-with-react-native-and-expo-6ea6a31a151d
+
+- (possible solution) react-native-Geolocation API for location tracking of devices.
+Reference:
+
+https://reactnative.dev/docs/geolocation  (Deprecated).
+
+https://github.com/react-native-community/react-native-geolocation  (maintained).
+
+- (possible solution) react-native-ble-manager API to control Blue tooth on devices.
+https://github.com/innoveit/react-native-ble-manager
+
