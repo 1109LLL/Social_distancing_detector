@@ -1,11 +1,36 @@
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import React, { useState } from 'react';
+import { Button, StyleSheet, Text, View, Alert } from 'react-native';
+
+// function StartButton()
+// {
+//   const [buttonPressed, setButtonPressed] = useState(false);
+
+//   return 
+//   (
+//     <View>
+//       <Text>
+//         Please press button to activate detector
+//       </Text>
+//       <Button
+//         onPress={() => {setButtonPressed(true);}}
+//         disabled={!buttonPressed}
+//         title={"Detector successfully activated"}
+//       />
+//     </View>
+//   );
+// }
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text>Abid to the social distancing guidlines, protect NHS and save lives!</Text>
-      <Text>Press button to start tracking the safe distance between you and others.</Text>
+      <Text>
+        Please press button to activate detector
+      </Text>
+      <Button
+        title = "Start"
+        color ="#f194ff"
+        onPress={() => Alert.alert('Detector activated')}
+      />
     </View>
   );
 }

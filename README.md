@@ -3,7 +3,7 @@ Alarm system to detect whether people are less than 2m away from each other. If 
 
 This project uses [yarn] (https://yarnpkg.com/lang/en/) as the package manager.
 
-Development language: react-native.
+Frame work: react-native.
 
 Version: 0.61.4.
 
@@ -21,6 +21,12 @@ yarn install
 
 ```command
 yarn start
+```
+
+or
+
+```command
+expo start
 ```
 
 ## Managed and Bare Workflows
