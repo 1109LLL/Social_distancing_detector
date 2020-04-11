@@ -2,23 +2,24 @@ import React, { useState, Component } from 'react';
 import { Button, StyleSheet, Text, View, Alert } from 'react-native';
 
 
+// const [buttonState, setButtonState] = useState(false);
+let buttonState = false;
 
 activateButton = () =>
 {
-  Alert.alert('Detector Activated')
+Alert.alert('Detector Activated')
 }
 
 deactivateButton = () =>
 {
-  Alert.alert('Detector Deactivated!')
+Alert.alert('Detector Deactivated!')
 }
 
 function alertHandler()
 {
-  const [buttonState, setButtonState] = useState(false);
-  setButtonState(!buttonState)
+  // setButtonState(!buttonState);
 
-  if (buttonState == true)
+  if (buttonState)
   {
     return activateButton;
   }
@@ -27,6 +28,7 @@ function alertHandler()
     return deactivateButton;
   }
 }
+
 
 export default function App() {
 
