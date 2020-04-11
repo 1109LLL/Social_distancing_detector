@@ -1,26 +1,35 @@
-import React, { useState } from 'react';
+import React, { useState, Component } from 'react';
 import { Button, StyleSheet, Text, View, Alert } from 'react-native';
 
-// function StartButton()
-// {
-//   const [buttonPressed, setButtonPressed] = useState(false);
 
-//   return 
-//   (
-//     <View>
-//       <Text>
-//         Please press button to activate detector
-//       </Text>
-//       <Button
-//         onPress={() => {setButtonPressed(true);}}
-//         disabled={!buttonPressed}
-//         title={"Detector successfully activated"}
-//       />
-//     </View>
-//   );
-// }
+
+activateButton = () =>
+{
+  Alert.alert('Detector Activated')
+}
+
+deactivateButton = () =>
+{
+  Alert.alert('Detector Deactivated!')
+}
+
+function alertHandler()
+{
+  const [buttonState, setButtonState] = useState(false);
+  setButtonState(!buttonState)
+
+  if (buttonState == true)
+  {
+    return activateButton;
+  }
+  else
+  {
+    return deactivateButton;
+  }
+}
 
 export default function App() {
+
   return (
     <View style={styles.container}>
       <Text>
@@ -29,10 +38,11 @@ export default function App() {
       <Button
         title = "Start"
         color ="#f194ff"
-        onPress={() => Alert.alert('Detector activated')}
+        onPress={alertHandler()}
       />
     </View>
   );
+
 }
 
 const styles = StyleSheet.create({
